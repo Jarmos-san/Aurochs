@@ -18,14 +18,16 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - uses: Gr1N/setup-poetry@v4
+    - uses: abatilo/actions-poetry@v2.0.0
     - uses: actions/cache@v1
       with:
         path: ~/.cache/pypoetry/virtualenvs
         key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
         restore-keys: |
           ${{ runner.os }}-poetry-
-    - run: poetry --version
+    - run: |
+      poetry --version
+      poetry shell
 
     - name: Install dependencies
       run: |
