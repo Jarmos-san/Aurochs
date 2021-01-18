@@ -9,7 +9,7 @@ repository = "https://github.com/Jarmos-san/Aurochs"
 keywords = ["Python", "Jobs", "Developer", "Remote", "Job Board"]
 
 [tool.poetry.urls]
-"Tracker" = ""https://github.com/Jarmos-san/Aurochs/issues""
+"Tracker" = "https://github.com/Jarmos-san/Aurochs/issues"
 
 [tool.poetry.dependencies]
 python = "^3.8"
