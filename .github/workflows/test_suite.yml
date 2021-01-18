@@ -1,0 +1,46 @@
+name: Python package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - uses: Gr1N/setup-poetry@v4
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pypoetry/virtualenvs
+        key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-poetry-
+    - run: poetry --version
+
+    - name: Install dependencies
+      run: |
+        poetry install
+
+    - name: Lint with flake8
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Test with pytest
+      run: |
+        pytest -vvv --cov-report xml:cov.xml --cov=Aurochs tests\
+
+    - name: "Upload Coverage Reports to Codecov"
+      uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
