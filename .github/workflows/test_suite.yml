@@ -26,8 +26,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-poetry-
     - run: |
-      poetry --version
-      poetry shell
+        poetry --version
+        poetry shell
 
     - name: Install dependencies
       run: |
