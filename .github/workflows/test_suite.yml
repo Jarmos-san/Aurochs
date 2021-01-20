@@ -59,7 +59,7 @@ jobs:
       - name: Run tests
         run: |
           source $VENV
-          pytest -vvv --cov-report xml --cov=Aurochs tests\
+          pytest -vvv --cov-report xml --cov=./
       - name: Upload coverage
         uses: codecov/codecov-action@v1.2.1
         with:
