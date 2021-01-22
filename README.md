@@ -1,6 +1,6 @@
 # Aurochs
 
-[![Codecov](https://img.shields.io/codecov/c/gh/Jarmos-san/Aurochs?color=F01F7A&label=Coverage&logo=CodeCov&token=5ZSXRX2ZLI)](https://codecov.io/gh/Jarmos-san/Aurochs) [![License](https://img.shields.io/github/license/Jarmos-san/Aurochs?color=181717&label=License&logo=GitHub)](https://github.com/Jarmos-san/Aurochs/blob/dev/LICENSE) [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Jarmos-san/Aurochs?color=181717&label=Commit%20Frequency&logo=GitHub)](https://github.com/Jarmos-san/Aurochs/graphs/commit-activity)
+[![Codecov](https://img.shields.io/codecov/c/gh/Jarmos-san/Aurochs?color=F01F7A&label=Coverage&logo=CodeCov&token=5ZSXRX2ZLI)](https://codecov.io/gh/Jarmos-san/Aurochs) [![License](https://img.shields.io/github/license/Jarmos-san/Aurochs?color=181717&label=License&logo=GitHub)](https://github.com/Jarmos-san/Aurochs/blob/dev/LICENSE) [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Jarmos-san/Aurochs?color=181717&label=Commit%20Frequency&logo=GitHub)](https://github.com/Jarmos-san/Aurochs/graphs/commit-activity) [![Test Suite](https://github.com/Jarmos-san/Aurochs/workflows/Test%20Suite/badge.svg)](https://github.com/Jarmos-san/Aurochs/actions?query=workflow%3A%22Test+Suite%22)
 
 - [Aurochs](#aurochs)
   - [About the Project](#about-the-project)
@@ -16,7 +16,7 @@
 
 ## About the Project
 
-Aurochs is the name of the repository that holds a bunch of scripts that scrapes the [official Python job board](https://python.org/jobs). The name "_Auroch_" doesn't really have much significance in context to the project. But I chose that name due to the unique sounding name.
+Aurochs is the name of the repository that holds a bunch of scripts that scrape the [official Python job board](https://python.org/jobs). The name "_Auroch_" doesn't have much significance in context to the project. But I chose that name due to the unique sounding name.
 
 ### Built With
 <!-- TODO: List the dependencies -->
@@ -29,7 +29,7 @@ Aurochs is the name of the repository that holds a bunch of scripts that scrapes
 
 ### Installation
 
-Aurochs is available on PyPi, so its easy to install with `pip`. Run the following command & ensure you've a virtual environment set up already.
+Aurochs is available on PyPi, so it's easy to install with `pip`. Run the following command & ensure you've a virtual environment set up already.
 
 ```bash
 pip install Aurochs  # You might've to use sudo, although it's discouraged
@@ -45,7 +45,7 @@ pip install git+https://github.com/Jarmos-san/Aurochs
 <!-- TODO: Describe how to use Aurochs -->
 
 ## Roadmap
-<!-- TODO: Describe where to keep a lookout for further development roadmap -->
+<!-- TODO: Describe were to keep a lookout for further development roadmap -->
 
 ## Contributing
 
