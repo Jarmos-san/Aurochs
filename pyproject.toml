@@ -13,13 +13,13 @@ keywords = ["Python", "Jobs", "Developer", "Remote", "Job Board"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aiohttp = "^3.7.3"
+requests = "^2.25.1"
+beautifulsoup4 = "^4.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
 black = "^20.8b1"
 flake8 = "^3.8.4"
-pytest-asyncio = "^0.14.0"
 pytest-cov = "^2.11.0"
 isort = "^5.7.0"
 
