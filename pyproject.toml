@@ -23,6 +23,14 @@ flake8 = "^3.8.4"
 pytest-cov = "^2.11.0"
 isort = "^5.7.0"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -vv --durations=5 --color=auto --code-highlight=yes"
+testpaths = ["tests"]
+console_output_style = "count"
+required_plugins = "pytest-cov"
+
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
