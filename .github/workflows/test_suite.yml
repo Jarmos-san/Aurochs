@@ -36,7 +36,7 @@ jobs:
         shell: bash
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2.3.4
       - name: Set up Python v${{matrix.python-version }}
         uses: actions/setup-python@v2
@@ -47,15 +47,16 @@ jobs:
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: Load cached virtualenv
-        id: cached-poetry-dependencies
+      - name: Load Cached Virtualenv
+        id: cached-pip-wheels
         uses: actions/cache@v2.1.3
         with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashfiles('**/poetry.lock') }}
+          path: ~/.cache
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
       - name: Install dependencies
-        run: poetry install --no-interaction -vvv
-        if: steps.cached-poetry-dependencies.output.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root -vvv
+      - name: Install Aurochs
+        run: poetry install --no-interaction
       - name: Run tests
         run: |
           source $VENV
